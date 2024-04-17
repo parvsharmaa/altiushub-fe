@@ -94,7 +94,6 @@ function EnhancedTableHead(props) {
                   : undefined
               }
             >
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <Link
                 underline='none'
                 color='neutral'
@@ -205,7 +204,7 @@ EnhancedTableToolbar.propTypes = {
 
 const Invoice = () => {
   const [order, setOrder] = React.useState('asc');
-  const [orderBy, setOrderBy] = React.useState('id'); // Default sorting by id
+  const [orderBy, setOrderBy] = React.useState('id');
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -272,7 +271,7 @@ const Invoice = () => {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelected = rows.map((n) => n.id); // Assuming 'id' is the unique identifier
+      const newSelected = rows.map((n) => n.id); 
       setSelected(newSelected);
       return;
     }
